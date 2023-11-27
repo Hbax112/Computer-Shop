@@ -1,0 +1,378 @@
+*{
+    box-sizing:border-box;
+    padding:0;
+    margin:0;
+}
+body{
+    height:650px;    
+    background-size:cover;
+    box-sizing:border-box;
+    font-family:sans-serif;
+}
+
+
+h1{
+font-size:50px;
+text-align: center;
+color: lightgoldenrodyellow;
+background-color:orangered;
+}
+
+h2{
+font-size:20px;
+text-align: left;
+color: lightgoldenrodyellow;
+background-color:orangered;
+}
+
+/*-------dropdown nav bar-------*/
+.menu-bar{
+    background:darkred;
+    text-align:center;
+    z-index: 3;
+}
+.menu-bar ul{
+    display:inline-flex;
+    list-style:none;
+    color: orangered  ;
+}
+.menu-bar ul li{
+    width:100px;
+    margin:10px;
+    padding:15px;
+}
+.menu-bar ul li a{
+    text-decoration:none;
+    color:lightgoldenrodyellow;
+}
+.active, .menu-bar ul li:hover{
+    background:red  ;
+    border-radius:5px;
+}
+.sub-menu1{
+    display:none;
+}
+.menu-bar ul li:hover .sub-menu1{
+    display:block;
+    position:absolute;
+    background:orangered;
+    margin-top:15px;
+    margin-left:-15px;
+}
+.menu-bar ul li:hover .sub-menu1 ul{
+    display:block;
+    margin:10px;
+}
+.menu-bar ul li:hover .sub-menu1 li{
+    width:150px;
+    padding:10px;
+    border-bottom:1px dotted #FFFFFF;
+    background:transparent;
+    border-radius:0;
+    text-align:left;
+}
+.menu-bar ul li:hover .sub-menu1 li:last-child{
+    border-bottom:none;
+}
+.menu-bar ul li:hover .sub-menu1 li a:hover{
+    color:orangered ;
+}
+.sub-menu2{
+    display:none;
+}
+.hover-me:hover .sub-menu2{
+   position:absolute;
+   display:block;
+   margin-top: -40px;
+   margin-left: 140px;
+   background:orangered ;
+
+}
+/*-------products-------*/
+.small-container{
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.title{
+    text-align: center;
+    margin: 0 auto 80px;
+    position: relative;
+    line-height: 60px;
+    color:lightgoldenrodyellow;
+}
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.col-4{
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    transition: transform 0.5s;
+}
+.col-4 img{
+    width: 100%;
+}
+h4{
+    color: blue;
+    font-weight: normal;
+}
+.col-4 p{
+font-size: 14px;
+}
+.col-4:hover{
+    transform: translateY(-5px);
+}
+.contact-title{
+    text-align: left;
+    color: black;
+}
+.not-underline{
+    text-decoration: none;
+}
+/*-------product details-------*/
+.single-product{
+    margin-top: 0px;
+}
+.single-product .col-2 img{
+    padding: 0;
+}
+.single-product .col-2{
+    padding: 20px;
+}
+.single-product h4{
+    margin: 20px 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+.single-product input{
+    width: 50px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 20px;
+    margin-right: 10px;
+    border: 1px solid blueviolet;
+}
+input:focus{
+    outline: none;
+}
+.small-img-row{
+    display: flex;
+    justify-content: space-between;
+}
+.small-img-col{
+    flex-basis: 25%;
+    cursor: pointer;
+    margin: 0;
+}
+/*-------event discount-------*/
+.Demo{
+    margin-left: 150px;
+    color: red;
+    cursor: pointer;
+}
+/*---------------------*/
+.btn{
+    display: inline-block;
+    background: orangered;
+    color:#fff;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background: orangered;
+}
+/*-------cart-------*/
+.cart-page{
+    margin: 10px auto;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.cart-info{
+    display: flex;
+    flex-wrap: wrap;
+}
+th{
+    text-align: left;
+    padding: 5px;
+    color: #fff;
+    background: orangered;
+    font-weight: normal;
+}
+td{
+    padding: 10px 5px;
+}
+td input{
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+}
+td a{
+    color: orangered;
+    font-size: 12px;
+}
+td img{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+.total-price{
+    display: flex;
+    justify-content: flex-end;
+}
+.total-price table{
+    border-top: 3px solid orangered;
+    width: 100%;
+    max-width: 400px;
+}
+td:last-child{
+    text-align: center;
+}
+th:last-child{
+    text-align: center;
+}
+/*-------conn-------*/
+.account-page{
+    padding: 50px 0;
+    background: white;
+}
+.form-container{
+    background: #fff;
+    width: 300px;
+    height: 400px;
+    position: relative;
+    text-align: center;
+    padding: 20px 0;
+    margin: auto;
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+.form-container span{
+    font-weight: bold;
+    padding: 0 10px;
+    color: #555;
+    cursor: pointer;
+    width: 100px;
+    display: inline-block;
+}
+.form-btn{
+    display: inline-block;
+}
+.form-container form{
+    max-width: 300px;
+    padding: 0 20px;
+    position: absolute;
+    top: 130px;
+    transition: transform 1s;
+}
+form input{
+    width: 100%;
+    height: 30px;
+    margin: 10px 0;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+}
+form .btn{
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0;
+}
+form .btn:focus{
+    outline: none;
+}
+#LoginForm{
+    left: -300px;
+}
+#RegForm{
+    left: 0;
+}
+form a{
+    font-size: 12px;
+}
+#Indicator{
+    width: 100px;
+    border: none;
+    background: orangered;
+    height: 3px;
+    margin-top: 8px;
+    transform: translateX(100px);
+    transition: transform 1s;
+}
+.dynamic{
+left:100px;
+}
+h3{
+    color: #555;
+}
+/* Stilizare pentru coșul de cumpărături și lista de produse */
+#cart, #product-list {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/*---contact us---*/
+    .form-container1 {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .form-container1 input,
+    .form-container1 textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+    .form-container1 button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    /*---alta metoda de buton--*/
+    #myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: none;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+
+.input-style {
+ padding: 10px;
+ font-size: 20px;
+ border-radius: 10px;
+ border: 1px solid rgb(204 203 203);
+ box-shadow: 1px 1px 1px 1px rgb(204 203 203);
+}
