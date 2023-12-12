@@ -1,0 +1,131 @@
+
+body {
+    background : #fbffef;
+    margin : 2px;
+    border : gray double;
+  }
+
+p,h1,pre {
+    margin:3px 3px 3px 3px;
+    font-size:12px;
+  }
+
+p.meniu {
+    margin:5px 5px 5px 5px;
+    text-shadow:inherit;
+  }
+
+p.mesaj {
+    font : oblique 100 xx-large Serif;
+    outline : inherit;
+    color : #0000FF;
+    letter-spacing : 0.2em;
+    text-align : center;
+    text-decoration : blink;
+  }
+
+p.mesaj1 {
+    font-size:xx-large;
+    font-weight:100;
+    font-style:oblique;
+    font-family:serif;
+    color:#0AA805;
+    letter-spacing: 0.2em;
+    outline:inherit;
+    text-align:center;
+    text-decoration:blink;
+  }
+
+p.mesaj_eroare {
+    color : #e51212;
+    font-family : serif;
+    font-size : 12pt;
+    font-style : italic;
+    font-weight : bold;
+    letter-spacing : 0.2em;
+    outline-style : inherit;
+    text-align : center;
+    text-decoration : blink;
+  }
+
+#leftcontent {
+    background : #fbffef;
+    font : small;
+    margin : 3px;
+    border-style : outset;
+    bottom : 5mm;
+    float : left;
+    left : -1;
+    overflow : auto;
+    position : absolute;
+    top : 16mm;
+    width : 20%;
+  }
+
+#postit {
+    background : #0cfffb;
+    font : normal;
+    padding : 5px;
+    outline : #f3f3f3 double thick;
+    border : #0000ff;
+    border-width : 2px 1px 1px 1px;
+    border-style : inset inset inset inset;
+    clip : auto;
+    cursor : hand;
+    font : caption;
+    height : 25%;
+    width : 30%;
+    left : 60%;
+    top:60%;
+    overflow : auto;
+    position: absolute;
+
+  }
+
+#rightcontent {
+    background : #fbffef;
+    font : 8px;
+    border-style : outset;
+    azimuth : leftwards;
+    bottom : 5mm;
+    clip : auto;
+    float : inherit;
+    left : 290;
+    overflow : auto;
+    position : absolute;
+    top : 17mm;
+    width : 73%;
+  }
+
+
+
+a:link {
+    color: #0000FF;
+    background-color: #1ED0FD;
+    font-size: 12px;
+    border: 2px outset blue;
+    font-family: sans-serif;
+    text-transform: lowercase;
+    text-decoration: none;
+  }
+
+a:visited {
+    color: #0000FF;
+    background-color: #1ED0FD;
+    font-size: 12px;
+    border: 2px outset blue;
+    font-family: sans-serif;
+    text-transform: lowercase;
+    text-decoration: none;
+  }
+
+  a:hover {
+    background : #1ED0FD;
+    font : normal 12px serif;
+    border : blue inset 2px;
+    color : #000000;
+    letter-spacing : 1px;
+    text-decoration : blink;
+    text-transform : uppercase;
+    word-spacing : 1px;
+  }

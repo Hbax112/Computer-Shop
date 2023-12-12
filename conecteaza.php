@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
 //conexiunea la baza de date
 $host="localhost";
 $user="marius";

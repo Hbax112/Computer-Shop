@@ -1,5 +1,10 @@
 <?php
-session_start();
+//session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+error_reporting(E_ERROR | E_WARNING);
+ini_set('display_errors', 0);
 include "conecteaza.php";
 if(!empty($_SESSION["id_utilizator"])){
     $id_utilizator = $_SESSION["id_utilizator"];
@@ -28,12 +33,13 @@ if(!empty($_SESSION["id_utilizator"])){
     print "</head>";
     print "<body>";
     //print $nume;
+/*
     if ($nume_utilizator!=""){
         print "<h1 id='".top."'> Computer Shop  -".ucfirst($nume_utilizator)."  </h1>";
     }
     else{
         print "<h1 id='".top."'> Computer Shop  ".ucfirst($nume_utilizator)."  </h1>";
     }
-
+*/
 
 ?>

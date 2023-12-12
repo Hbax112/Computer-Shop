@@ -23,34 +23,40 @@ font-size:20px;
 text-align: left;
 color: lightgoldenrodyellow;
 background-color:orangered;
+z-index: -2;
 }
 
 /*-------dropdown nav bar-------*/
 .menu-bar{
     background:darkred;
     text-align:center;
-    z-index: 3;
+    z-index: 300000000;
 }
 .menu-bar ul{
     display:inline-flex;
     list-style:none;
     color: orangered  ;
+    z-index: 333333;
 }
 .menu-bar ul li{
     width:100px;
     margin:10px;
     padding:15px;
+    z-index: 333333;
 }
 .menu-bar ul li a{
     text-decoration:none;
     color:lightgoldenrodyellow;
+    z-index: 2222;
 }
 .active, .menu-bar ul li:hover{
     background:red  ;
     border-radius:5px;
+    z-index: 2222;
 }
 .sub-menu1{
     display:none;
+    z-index: 2222;
 }
 .menu-bar ul li:hover .sub-menu1{
     display:block;
@@ -58,10 +64,12 @@ background-color:orangered;
     background:orangered;
     margin-top:15px;
     margin-left:-15px;
+    z-index: 2222;
 }
 .menu-bar ul li:hover .sub-menu1 ul{
     display:block;
     margin:10px;
+    z-index: 2222;
 }
 .menu-bar ul li:hover .sub-menu1 li{
     width:150px;
@@ -70,15 +78,19 @@ background-color:orangered;
     background:transparent;
     border-radius:0;
     text-align:left;
+    z-index: 2222;
 }
 .menu-bar ul li:hover .sub-menu1 li:last-child{
     border-bottom:none;
+    z-index: 2222;
 }
 .menu-bar ul li:hover .sub-menu1 li a:hover{
     color:orangered ;
+    z-index: 2222;
 }
 .sub-menu2{
     display:none;
+    z-index: 2222;
 }
 .hover-me:hover .sub-menu2{
    position:absolute;
@@ -86,7 +98,7 @@ background-color:orangered;
    margin-top: -40px;
    margin-left: 140px;
    background:orangered ;
-
+   z-index: 2222;
 }
 /*-------products-------*/
 .small-container{

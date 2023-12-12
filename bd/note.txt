@@ -1,0 +1,10 @@
+afiseaza cantitatea - pe care o diminueaza atunci cand se cumpara produsul
+daca cantitatea =0 - afiseaza produs indisponibil si nu afiseaza butonul de cumparare
+am corectat faptul ca daca dai click pe un produs, nu te mai trimite nicaieri - nu mai avem timp sa facem trimitere spre o pagina ce afiseaza descrierea produsului, aceasta fiind afisata in cos sau in isotric comenzi
+face bine calculul stocului la actualizarea cosului
+
+
+de verificat partea de admin cu incarcarea produselor (inclusiv poza)
+
+
+samd

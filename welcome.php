@@ -47,7 +47,7 @@ else{
             <div class = "nc" style= "margin-top:10px;">
                 <label class = "p1">Adresă email</label>
                 <br>
-                <input type="text" class="chenarInput" id="Mail"  name="Email">
+                <input type="email" class="chenarInput" id="Mail"  name="Email" placeholder="Adresa de email">
             </div>
     
            <div class="intrebare">

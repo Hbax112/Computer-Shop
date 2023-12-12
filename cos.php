@@ -1,7 +1,7 @@
 <?php include 'cap.php'?>
 <?php include 'meniu.php'?>
 
-
+ 
     <!------cart--------->
 <?php
     print "<div class='small-container cart-page'>";
@@ -23,6 +23,7 @@
                 print "<th>Produs</th>";
                 print "<th>Cantitate</th>";
                 print "<th>Valoare</th>";
+                print "<th>Operatii</th>";
             print "</tr>";
 
 		
@@ -41,8 +42,22 @@
 			 $cantitate=$row['cantitate'];
 			 $suma=$row['pu'];
 			 $suma=floatval($suma);
-			 $total=$total+$suma;
-			 print "<div class='small-container cart-page'><tr><td>".$denumire."  ".$descriere." </td><td> ".$cantitate."</td><td> ".$suma." lei</td></tr></div>";
+			 $total=$total+$suma*$cantitate;
+             $id_produs=$row['id_produs'];
+
+			 //print "<div class='small-container cart-page'><tr><td>".$denumire."  ".$descriere." </td><td> ".$cantitate."</td><td> ".$suma." lei</td></tr></div>";
+             print "<div class='small-container cart-page'><tr><td>".$denumire."  ".$descriere." </td><td> ".$cantitate."</td><td> ".$suma." lei</td>";
+             print "<td>";
+                print "<form action='cos_ok.php' method='POST' enctype='multipart/form-data'>";
+                    print "<input type='submit' name='incrementeaza' value='+'>";
+                    print "<input type='submit' name='decrementeaza' value='-'>";
+                    print "<input type='submit' name='sterge' value='Elimina'>";
+                    print "<input type='hidden' name='cantitate' value=".$cantitate.">";
+                    print "<input type='hidden' name='id_produs' value=".$id_produs.">";
+
+                print "</form>";
+             print "</td>";
+             print"</tr></div>";
 		  }
 		}
 
@@ -62,7 +77,7 @@
                 print "</tr>";
 
                 print "<tr>";
-                    print "<td>TVA</td>";
+                    print "<td>Pret fara TVA</td>";
                     print "<td>".round($total-$tva,2)." lei</td>";
                 print "</tr>";
 				print "</table>";

@@ -18,7 +18,8 @@ if(isset($_POST["submit"])){
             //print $query;
             mysqli_query($con,$query);
             echo
-            "<script> alert($query'<br>$nume a fost inregistrat cu succes'); </script>";
+            "<script> alert($query'<br>$utilizator a fost inregistrat cu succes'); </script>";
+            print "<meta HTTP-EQUIV='Refresh' CONTENT='1; URL=index.php'>";
     }
 }
 ?>
@@ -26,9 +27,9 @@ if(isset($_POST["submit"])){
 <?php include 'cap.php'?>
 
 
-	<br><br><br><br><br><br>
+    <br><br><br><br><br><br>
 
-	<!----------account----------->
+    <!----------account----------->
     <div class="account-page">
         <div class="container">
             <div class="row">

@@ -2,9 +2,10 @@
 <?php include 'meniu.php';
     $produs=$_POST['produs'];
     print "<div class='small-container'>";
-    print "<h2 class='title'>Produse in magazin - $produs</h2>";
+    print "<h2 class='title'>Produse in magazin (denumire sau descriere) - $produs</h2>";
     print "<div class='row'>";
-            $sir="select count(*) as nr from produse where denumire like '%".$produs."%'";
+            $sir="select count(*) as nr from produse where denumire like '%".$produs."%' or descriere like '%".$produs."%'";
+            //print $sir;
             $nr=mysqli_query($con,$sir);
             
             if ($nr!=0){

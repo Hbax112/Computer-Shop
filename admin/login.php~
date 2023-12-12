@@ -1,0 +1,75 @@
+<?
+
+//verifica corectitudinea datelor introduse:
+/*
+global $nume;
+global $parola;
+global $pe;
+global $cnp;
+global $cnp_user;
+global $user;
+*/
+include '../conecteaza.php';
+$nume=$_POST['nume'];
+$parola=$_POST['parola'];
+$pe=md5($parola);
+$user=$nume;
+$cnp_user=$cnp;
+
+if ($nume=="" or $parola==""){
+
+	print "<center>";
+		print "<html>";
+		print "<title>Acces neautorizat!</title>";
+		print "<body style='background-color: rgb(200, 250, 250); color: rgb(0, 0, 0);'  alink='#ee0000' link='#0000ee' vlink='#551a8b'>";
+		print "<center><font color='red' size='7'><br><br>";
+		print "<font size='+3' color='red'>Trebuie introduse si numele si parola</font>";
+		print "</font></center>";
+		print "</body>";
+		print "</html>";
+ 		print "<meta HTTP-EQUIV='Refresh' CONTENT='2; URL=index.php'>";
+}
+else
+{
+	/**
+	 * conecteaza la sursa de date
+	 *
+	 */
+	include ('../conecteaza.php');
+	$sir="select * from admin where user='".$nume."' and pass='".$pe."'";
+//  	print $sir."<br>";
+	$resursa=mysql_query($sir);
+// 	print $resursa;
+	if (mysql_num_rows($resursa)==0){
+		//print "<center>";
+		//print "<html>";
+		print "<title>Acces neautorizat!</title>";
+		print "<body style='background-color: rgb(200, 250, 250); color: rgb(0, 0, 0);'  alink='#ee0000' link='#0000ee' vlink='#551a8b'>";
+		print "<center><font color='red' size='7'><br><br>";
+		print "Ati gresit userul sau parola!<br>mai incearca!";
+		print "</font></center>";
+		include ('../coada.php');
+		//print "</body>";
+		//print "</html>";
+ 		print "<meta HTTP-EQUIV='Refresh' CONTENT='5; URL=index.php'>";
+	}
+	else{
+		session_start();
+		$_SESSION['nume']=$nume;
+		$_SESSION['parola']=$pe;
+		$_SESSION['key_admin']=session_id();
+		print "<body style='background-color: rgb(200, 250, 250); color: rgb(0, 0, 0);'  alink='#ee0000' link='#0000ee' vlink='#551a8b'>";
+		print "<center><font color='blue' size='7'><br><br><br>";
+		$nn=ucfirst($nume);
+		print "Bine ai revenit, $nn.</i></b>";
+		print "</font></center>";
+		//determin cnp-ul userului
+		while ($row=mysql_fetch_array($resursa)){
+			$cnp=$row['cnp'];
+		}
+// 		print $cnp;
+		include ('../coada.php');
+ 		print "<meta HTTP-EQUIV='Refresh' CONTENT='3; URL=../index.php'>";
+	}
+}
+?>

@@ -1,0 +1,144 @@
+
+body {
+    background : #fbffef;
+    margin : 2px;
+    border-style: outset;
+}
+
+
+p,h1,pre {
+    margin:3px 3px 3px 3px;
+    font-size:12px;
+  }
+
+p.meniu {
+    margin:1px 1px 1px 1px;
+    text-shadow:inherit;
+  }
+
+p.mesaj {
+    font : oblique 100 xx-large Serif;
+    outline : inherit;
+    color : #0000FF;
+    letter-spacing : 0.2em;
+    text-align : center;
+    text-decoration : blink;
+    border-style:  ridge;
+    background: red;
+    margin-top: 150px;
+
+  }
+
+
+
+p.mesaj1 {
+    font-size:xx-large;
+    font-weight:100;
+    font-style:oblique;
+    font-family:serif;
+    color:#0AA805;
+    letter-spacing: 0.2em;
+    outline:inherit;
+    text-align:center;
+    text-decoration:blink;
+  }
+
+p.mesaj_eroare {
+    color : #e51212;
+    font-family : serif;
+    font-size : 12pt;
+    font-style : italic;
+    font-weight : bold;
+    letter-spacing : 0.2em;
+    outline-style : inherit;
+    text-align : center;
+    text-decoration : blink;
+  }
+
+
+#leftcontent {
+    background : #fbffef;
+    font-size: 8px;
+    margin : 1px;
+    border-style : outset;
+    bottom : 5px;
+    left : 5px;
+    position : absolute;
+    top : 70px;
+    width : 350px;
+    overflow: auto;
+    color: #000000; 
+    font-family: Verdana; 
+    font-size: 12px; 
+    background-color: #E0FFFF;
+  }
+
+#postit {
+    background: #33ffee;
+    font-size: 10px;
+    padding : 1px;
+    border : #0000ff;
+    border-width : 2px 1px 1px 1px;
+    border-style : inset outset outset inset;
+    border-color: red;
+    height : 15%;
+    width : 95%;
+    left : 3%;
+    top:80%;
+    overflow: auto;
+    position: absolute;
+
+  }
+
+#rightcontent {
+    background : #fbffef;
+    font-size: 10px;
+    border-style : outset;
+    bottom : 8px;
+    left : 365px;
+    position : absolute;
+    top : 73px;
+    width : 72%;
+    overflow: auto;
+    
+   }
+
+
+a:link {
+    color: black;
+    background-color: #fbffef;
+    font-size: 12px;
+    border: 2px outset blue;
+    font-family: sans-serif;
+    text-transform:  lowercase;
+    text-decoration: none;
+    display: block;
+  }
+
+a:visited {
+    color: black;
+    background-color: #fbffef;
+    font-size: 12px;
+    border: 2px outset blue;
+    font-family: sans-serif;
+    text-transform: lowercase;
+    text-decoration: none;
+    display: block;
+  }
+
+  a:hover {
+    background : #1ED0FD;
+    font : normal 12px serif;
+    border : blue inset 2px;
+    color : #000000;
+    text-decoration : blink;
+    display: block;
+  }
+
+
+ul
+{
+list-style-type:none;
+padding:0px;
+margin:0px;
+}

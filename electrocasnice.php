@@ -23,11 +23,19 @@
                         print "<div class='col-4'>";
                 ?>
                 <a href= <?php echo $row['link']; ?>  >
+ <a href= <?php echo $row['link']; ?>  >
                 <?php echo '<img src="data:image;base64,'.base64_encode($row['imagine']).'" alt="Image" >'; ?>  </a><br>
                  <?php echo $row['denumire']; ?> <br>
                  <!-- <?php echo $row['descriere']; ?> <br><br><br>  -->
-                 <?php echo "Ramas in stoc:" .$row['cantitate']." buc"; ?> <br><br>
-                 <?php echo "<center><strong>".$row['pu'] ." lei</strong></center>"; ?> <br>
+                 <?php 
+                    if ($cantitate>0){
+                        echo "Ramas in stoc:" .$row['cantitate']." buc"; 
+                        echo "<center><strong>".$row['pu'] ." lei</strong></center></br>"; 
+                    }
+                    else{
+                        echo "<font color='red'>Produs indisponibil momentan</font>";
+                    }
+                ?> <br><br>
                 <form class="" action="ad_cos.php" method="post" autocomplete="off"> <?php
                     if(!empty($_SESSION["id_utilizator"])){
                         $id_utilizator=$_SESSION['id_utilizator'];
@@ -38,14 +46,15 @@
                     print "<input type='hidden' name='suma' value='".$suma."' >";
                     print "<input type='hidden' name='descriere' value='".$descriere."' >";
                     print "<input type='hidden' name='denumire' value='".$denumire."' >";
-
+                    print "<input type='hidden' name='cantitate' value='".$cantitate."' >";
                     print "<input type='hidden' name='os' value='".$os."' >";
                     print "<input type='hidden' name='procesor' value='".$procesor."' >";
                     print "<input type='hidden' name='ram' value='".$ram."' >";
                     print "<input type='hidden' name='video' value='".$video."' >";
-
                     print "<input type='hidden' name='id_utilizator' value='".$id_utilizator."' >";                                
-                    print "<input type='submit' name='submit' value='Adauga in cos' >";
+                    if ($cantitate>0){
+                        print "<input type='submit' name='submit' value='Adauga in cos' >";
+                    }
                 ?>
             </form>
          </div>

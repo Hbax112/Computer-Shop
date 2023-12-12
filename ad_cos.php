@@ -5,6 +5,8 @@
 	$sesiune=$_SESSION['key_admin'];
     if (is_null($sesiune)){
         print "<strong><center><br>Nu puteti adauga poduse in cos<br>fara sa fiti autentificat</center></strong>";
+		include 'coada.php';
+		print "<meta HTTP-EQUIV='Refresh' CONTENT='2; URL=index.php'>";
         exit;
     }
 
@@ -13,7 +15,7 @@
 	$descriere=$_POST['descriere'];	
 	$denumire=$_POST['denumire'];
 	$id_utilizator=$_POST['id_utilizator'];
-
+	$cantitate=$_POST['cantitate'];
 	$os=$_POST['os'];	
 	$procesor=$_POST['procesor'];	
 	$ram=$_POST['ram'];	
@@ -21,6 +23,9 @@
 
 	$sesiune=$_SESSION['key_admin'];
 	$data_comanda=date("Y.m.d");
+	$cant=$cantitate-1;
+	$sir="update produse set cantitate=$cant where id_produs=$id_produs";
+	mysqli_query($con,$sir);
 
 //	$sir="insert into cos (id_produs, cantitate, id_utilizator, pu, descriere, denumire, os, procesor, ram, video,sesiune, data_comanda) values ($id_produs, 1,$id_utilizator, $suma, '".$descriere."', '".$denumire."','".$sesiune."','".$data_comanda."')";
 
@@ -31,23 +36,6 @@
 	
 	mysqli_query($con,$sir);
 	print "<br /><br /><br /><center><strong>Cosul a fost actualizat cu succes</strong></center>";
-	print "<meta HTTP-EQUIV='Refresh' CONTENT='2; URL=cos.php'>";
-
-/*
-	print "<br />1. produs=$id_produs";
-	print "<br />2. suma=$suma";
-	print "<br />3. descriere=$descriere";
-	print "<br />4. descriere2=$descriere2";
-	print "<br />5. id utilizator=$id_utilizator";
-
-	print "<br />6. os=$os";
-	print "<br />7. procesor=$procesor";
-	print "<br />8. ram=$ram";
-	print "<br />9. video=$video";
-
-	print "<br />10. sir=$sir";
-	print "<br />11. sesiune=$sesiune";
-	print_r($_SESSION);
-*/	
-
+	print "<meta HTTP-EQUIV='Refresh' CONTENT='1; URL=cos.php'>";
 ?>
+<?php include 'coada.php'?>

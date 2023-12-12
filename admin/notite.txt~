@@ -1,0 +1,6 @@
+=6.	11.20.2005	la actualizarea stocului (in functii.php) va trebui sa faci ai fiecare produs sa aiba un index unic, in functie de care la iesiri se va sti exact ce produs a fost extras. Mai ai de facut iesirile si stocul.
++6.	id=concat(cod_produs,pu,cantitate,cont)
+5.	11.10.2005	va trebui sa corectezi modul in care listeaza bonurile. pentru produsele noi iesite, se genereaza automat numar de bon, iar pentru cele deja scoase (pmc) va trebui sa le reglezi.
+4.	11.10.2005	la receptiile de la pmc, va trebui sa realizezi o aplicatie care sa genereze id-ul pentru produsele care nu au ID
+3.	10.10.2005	trebuie sa faci partea de iesiri, conform specificatiilor fisierului initializare.php si a noilor 2.  =2.     sripturi de actualizare stoc, calcul iesiri;2. 	06.08.2005	mai ai de verificat actualizarea datelor din dosar
+=1.	06.08.2005	de verificat nodul in care functioneaza actualizarea 	datelor la interogarea specifica linux

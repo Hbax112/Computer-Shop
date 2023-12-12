@@ -1,0 +1,135 @@
+
+body {
+    background :#E6FFCC;
+    margin : 2px;
+    border : gray double;
+  }
+
+p,h1,pre {
+    margin:3px 3px 3px 3px;
+    font-size:12px;
+  }
+
+p.meniu {
+    margin:5px 5px 5px 5px;
+    text-shadow:inherit;
+  }
+
+p.mesaj {
+    font-size:xx-large;
+    font-weight:100;
+    font-style:oblique;
+    font-family:fantasy;
+    color:#0000FF;
+    letter-spacing: 0.2em;
+    outline:inherit;
+    text-align:center;
+    text-decoration:blink;
+  }
+
+p.mesaj1 {
+    font-size:xx-large;
+    font-weight:100;
+    font-style:oblique;
+    font-family:fantasy;
+    color:#0AA805;
+    letter-spacing: 0.2em;
+    outline:inherit;
+    text-align:center;
+    text-decoration:blink;
+  }
+
+p.mesaj_eroare {
+    background-color : #1cf3ef;
+    color : #e51212;
+    font-family : fantasy;
+    font-size : medium;
+    font-style : italic;
+    font-weight : bold;
+    letter-spacing : 0.2em;
+    outline-style : inherit;
+    text-align : center;
+    text-decoration : none;
+  }
+
+#leftcontent {
+    background : #fbffef;
+    font : small;
+    margin : 3px;
+    border-style : outset;
+    bottom : 5mm;
+    float : left;
+    left : -1;
+    overflow : auto;
+    position : absolute;
+    top : 20mm;
+    width : 25%;
+  }
+
+#postit {
+    position:absolute;
+    width:250;
+    padding:5px;
+    background-color:lightyellow;
+    border:1px solid black;
+    visibility:hidden;
+    z-index:100;
+    cursor:hand;
+  }
+
+#rightcontent {
+    background : #fbffef;
+    font : 8px;
+    border-style : outset;
+    azimuth : leftwards;
+    bottom : 5mm;
+    clip : auto;
+    float : inherit;
+    left : 260;
+    overflow : auto;
+    position : absolute;
+    top : 21mm;
+    width : 73.5%;
+  }
+
+a:link {
+    color: #0000FF;
+    background-color: #1ED0FD;
+    font-size: 12px;
+    border: 2px outset blue;
+    font-family: sans-serif;
+    text-transform: lowercase;
+    text-decoration: none;
+  }
+
+a:visited {
+    color: #0000FF;
+    background-color: #1ED0FD;
+    font-size: 12px;
+    border: 2px outset blue;
+    font-family: sans-serif;
+    text-transform: lowercase;
+    text-decoration: none;
+  }
+
+
+a:hover {
+    background : #1ED0FD;
+    font : normal 12px serif;
+    border : blue inset 2px;
+    color : #000000;
+    letter-spacing : 1px;
+    text-decoration : blink;
+    text-transform : uppercase;
+    word-spacing : 1px;
+  }
+#postare	{
+	position:absolute;
+    width:250;
+    padding:5px;
+    background-color:lightyellow;
+    border:1px solid black;
+    visibility:hidden;
+    z-index:100;
+    cursor:hand;
+}

@@ -3,7 +3,7 @@
                 <!-------products---------->
 <form action="cauta_ok.php" method="POST" enctype="multipart/form-data">
     <div class="small-container">
-        <h2 class="title">Cauta denumire produse in magazin</h2>
+        <h2 class="title">Cauta produse in magazin dupa cuvantul cheie de mai jos</h2>
             <div class="row">
                 <input type="text" placeholder="Cauta" name="produs" id="produs" required value=""><br>
                 <input type='submit' name='submit' value='Cauta produse'>

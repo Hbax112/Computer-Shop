@@ -1,0 +1,147 @@
+
+
+body {
+    background : #fbffef;
+    margin : 2px;
+    border : gray double;
+  }
+
+
+p,h1,pre {
+    margin:3px 3px 3px 3px;
+    font-size:12px;
+  }
+
+
+p.meniu {
+    margin:5px 5px 5px 5px;
+    text-shadow:inherit;
+  }
+
+
+p.mesaj {
+    background-color : #33f788;
+    color : #0000ff;
+    font : message-box;
+    font-family : fantasy;
+    font-size : 10pt;
+    font-style : oblique;
+    font-weight : normal;
+    letter-spacing : 0.2em;
+    outline-style : inherit;
+    text-align : center;
+    text-decoration: none;
+  }
+
+
+p.mesaj1 {
+    font-size:;
+    font-weight:100;
+    font-style:oblique;
+    font-family:fantasy;
+    color:#0AA805;
+    letter-spacing: 0.2em;
+    outline:inherit;
+    text-align:center;
+    text-decoration:blink;
+  }
+
+
+p.mesaj_eroare {
+    background-color : #1cf3ef;
+    color : #e51212;
+    font-family : fantasy;
+    font-size : medium;
+    font-style : italic;
+    font-weight : bold;
+    letter-spacing : 0.2em;
+    outline-style : inherit;
+    text-align : center;
+    text-decoration : none;
+  }
+
+
+#leftcontent {
+    background : #fbffef;
+    font : small;
+    margin : 3px;
+    border-style : outset;
+    bottom : 5mm;
+    float : left;
+    left : -1;
+    overflow : auto;
+    position : absolute;
+    top : 16mm;
+    width : 25%;
+  }
+
+
+#postiti {
+    background-color : lightyellow;
+    border-bottom-color : black;
+    border-bottom-style : solid;
+    border-bottom-width : 1px;
+    border-left-color : black;
+    border-left-style : dotted;
+    border-left-width : 1px;
+    border-right-color : black;
+    border-right-style : solid;
+    border-right-width : 1px;
+    border-top-color : black;
+    border-top-style : solid;
+    border-top-width : 1px;
+    cursor : hand;
+    float : left;
+    overflow : auto;
+    padding-bottom : 50px;
+    padding-left : 5px;
+    padding-right : 5px;
+    padding-top : 5px;
+    position : absolute;
+    visibility : hidden;
+    width : 250;
+  }
+
+
+#rightcontent {
+    background : #fbffef;
+    font : 8px;
+    border-style : outset;
+    azimuth : leftwards;
+    bottom : 5mm;
+    clip : auto;
+    float : inherit;
+    left : 262;
+    overflow : auto;
+    position : absolute;
+    top : 17mm;
+    width : 73%;
+  }
+
+
+a:link {
+    display:block;
+    left-border:5px solid blue;
+    color: #0000FF;
+    text-transform: none;
+    text-decoration: none;
+  }
+
+
+a:visited {
+    display:block;
+    left-border:5px solid blue;
+    color: red;
+    text-transform: none;
+    text-decoration: none;
+  }
+
+
+a:hover {
+    display:block;
+    left-border:5px solid blue;
+    color: black;
+    text-decoration: none;
+    text-transform : none;
+  }
+
